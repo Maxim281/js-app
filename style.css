@@ -16,16 +16,23 @@ body {
    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 body {
-   padding: 30px;
+   padding: 100px;
    background: #333;
+}
+.wrapper {
+   max-width: 1170px;
+   height: 100%;
+   margin: 0px auto;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
 }
 
-a {
-   text-decoration: none;
+button {
+   cursor: pointer;
+   outline: none;
 }
+
 /* ================================================================== */
 
 .buttons {
@@ -33,7 +40,8 @@ a {
    flex-direction: column;
 }
 
-.buttons a {
+.buttons button {
+   position: relative;
    color: #fff;
    background: #f0f;
    padding: 15px;
@@ -41,37 +49,45 @@ a {
    display: inline-block;
    text-align: center;
    border-radius: 10px;
+   transition: all 0.3s ease 0s;
+}
+.buttons button:hover {
+   box-shadow: 0 0 20px 1px #f0f;
+}
+.buttons button:active {
+   top: 1px;
 }
 
-.display {
+.content {
    padding: 50px;
    max-width: 500px;
    font-weight: 700;
    font-size: 16px;
    line-height: 1.4;
+   border-radius: 10px;
 }
 
-.bg1 {
+.color1 {
    background-color: red;
    color: #fff;
 }
-.bg2 {
+.color2 {
    background-color: white;
    color: #000;
 }
-.bg3 {
+.color3 {
    background-color: pink;
    color: #672f1e;
 }
-.bg4 {
+.color4 {
    background-color: lightblue;
    color: blue;
 }
-.bg5 {
+.color5 {
    background-color: #711e1e;
    color: #788578;
 }
-.bg6 {
+.color6 {
    background-color: #43b581;
    color: #f400a1;
 }
