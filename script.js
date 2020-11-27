@@ -46,6 +46,5 @@ generate.addEventListener('click', function () {
 
 // Очистить текст
 clear.addEventListener('click', function () {
-   bgcolor.classList.remove(myRandomColor);
-   text.style.display = 'none';
+   window.location.reload(true);
 })
