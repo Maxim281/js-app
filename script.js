@@ -22,29 +22,27 @@ let textArray = [
    "Если работа не завершена, но вы закончили работать над заданием - делайте коммит."
 ];
 
-// Случайный стиль
-Array.prototype.randomColor = function () {
-   return this[Math.floor(Math.random() * this.length)]
-};
-let myRandomColor = colorArray.randomColor();
-
-// Случайный текст
-Array.prototype.randomText = function () {
-   return this[Math.floor(Math.random() * this.length)]
-};
-let myRandomText = textArray.randomText();
-
 // Генерировать текст
 generate.addEventListener('click', function () {
+   // Случайный стиль
+   Array.prototype.randomColor = function () {
+      return this[Math.floor(Math.random() * this.length)]
+   };
+   let myRandomColor = colorArray.randomColor();
+   // Случайный текст
+   Array.prototype.randomText = function () {
+      return this[Math.floor(Math.random() * this.length)]
+   };
+   let myRandomText = textArray.randomText();
+
    bgcolor.classList.add(myRandomColor);
 
    text.innerHTML = myRandomText;
    bgcolor.insertAdjacentElement('afterbegin', text);
-
-   text.style.display = 'block';
 });
 
 // Очистить текст
 clear.addEventListener('click', function () {
-   window.location.reload(true);
+   bgcolor.classList.remove("color1", "color2", "color3", "color4", "color5", "color6");
+   text.remove('textArray');
 })
